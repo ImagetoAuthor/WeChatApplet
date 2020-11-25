@@ -4,4 +4,4 @@
 
 二维码（现在无法使用）：
 
-!(https://github.com/ImagetoAuthor/WeChatApplet/blob/master/QRcode.jpg?raw=true)
+![小程序二维码](https://github.com/ImagetoAuthor/WeChatApplet/blob/master/QRcode.jpg?raw=true)
