@@ -1,0 +1,5 @@
+<!--pages/history/history.wxml-->
+<view class="container">
+  <image class='background' src="/pictures/stars.jpg" mode="aspectFill"></image>
+  <text>历史记录</text>
+</view>
