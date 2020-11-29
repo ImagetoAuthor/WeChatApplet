@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Welcome to application',
+    motto: 'copyright © （中国海洋大学）刘海龙，马良吉，吕晓龙，宋江，余泽芃',
     upload: '提交图片',
     history: '历史记录',
     userinfo: {},

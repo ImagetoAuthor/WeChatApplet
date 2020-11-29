@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <image class='background' src="/pictures/stars.jpg" mode="aspectFill"></image>
+  <image class='background' src="/pictures/starnight.png" mode="aspectFill"></image>
 
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -11,11 +11,19 @@
   </view>
   <view class ="userlist">
     <text>\n</text>
-    <navigator url="/pages/upload/upload" open-type="redirect" hover-class="other-navigator-hover">{{upload}}</navigator>
+    <view class="Van">
+      <image src="/pictures/girl_in_pearl.jpg" class="in-image"></image>
+    </view>
     <text>\n</text>
-    <navigator url="/pages/history/history" open-type="redirect" hover-class="other-navigator-hover">{{history}}</navigator>
+    <navigator url="/pages/upload/upload" class="link" open-type="redirect" hover-class="other-navigator-hover">{{upload}}</navigator>
+    <text>\n\n\n\n\n\n\n</text>
+    <view class='imagesize'>
+      <image src="/pictures/history.png" class="in-image"></image>
+    </view>
+    <text>\n</text>
+    <navigator url="/pages/history/history" class="link" open-type="redirect" hover-class="other-navigator-hover">{{history}}</navigator>
   </view>
-  
+  <text>\n\n</text>
 
 
 
