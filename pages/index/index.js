@@ -4,8 +4,10 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Welcome!',
-    userInfo: {},
+    motto: 'Welcome to application',
+    upload: '提交图片',
+    history: '历史记录',
+    userinfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
@@ -51,4 +53,5 @@ Page({
       hasUserInfo: true
     })
   }
+
 })

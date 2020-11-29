@@ -1,0 +1,6 @@
+<!--pages/upload.wxml-->
+<view class="container">
+  <image class='background' src="/pictures/stars.jpg" mode="aspectFill"></image>
+  <text>提交图片</text>
+  <image bindtap="bindAdd" class ="addpicture"  src="/pictures/add.jpg"></image>
+</view>

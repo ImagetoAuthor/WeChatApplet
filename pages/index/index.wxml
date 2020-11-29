@@ -1,5 +1,7 @@
 <!--index.wxml-->
 <view class="container">
+  <image class='background' src="/pictures/stars.jpg" mode="aspectFill"></image>
+
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -7,6 +9,16 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  <view class ="userlist">
+    <text>\n</text>
+    <navigator url="/pages/upload/upload" open-type="redirect" hover-class="other-navigator-hover">{{upload}}</navigator>
+    <text>\n</text>
+    <navigator url="/pages/history/history" open-type="redirect" hover-class="other-navigator-hover">{{history}}</navigator>
+  </view>
+  
+
+
+
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
