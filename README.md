@@ -1,10 +1,7 @@
 # 看图猜作者（微信小程序）
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+开发小程序使得用户可以上传自己的画作然后使其和一些著名画家的风格对比并得出相似度。
 
-## 参考文档
+二维码（现在无法使用）：
 
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
-
+![小程序二维码](https://github.com/ImagetoAuthor/WeChatApplet/blob/master/QRcode.jpg?raw=true)

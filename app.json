@@ -4,7 +4,6 @@
     "pages/logs/logs",
     "pages/upload/upload",
     "pages/history/history",
-    "pages/result",
     "pages/result/result"
   ],
   "window": {
