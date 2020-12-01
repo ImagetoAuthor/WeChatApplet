@@ -9,7 +9,11 @@ App({
     // 登录
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.request({
+          url: "http://49.232.214.94/wdapi/login",  // 后端路径
+          data:{"code":res.code},
+        })
       }
     })
     // 获取用户信息
