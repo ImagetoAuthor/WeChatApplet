@@ -1,6 +1,21 @@
 <!--pages/upload.wxml-->
 <view class="container">
+<<<<<<< Updated upstream
   <image class='background' src="/pictures/stars.jpg" mode="aspectFill"></image>
   <text>提交图片</text>
   <image bindtap="bindAdd" class ="addpicture"  src="/pictures/add.jpg"></image>
 </view>
+=======
+  <image class='background' src="/pictures/starnight.png" mode="aspectFill"></image>
+  <text>\n</text>
+  <text class="link">提交图片</text>
+  <text>\n\n\n\n\n</text>
+  <picker range="{{array}}" range-key="st_name" value="{{index}}" bindchange="listenerPickerSelected" class="select">
+    <text>{{array[index].st_name}}▼</text>
+  </picker>
+  <text>\n\n\n\n\n</text>
+  <image bindtap="chooseImageTap" class ="addpicture"  src="/pictures/add.jpg" style="height: 222px;width: 222px;"></image>
+</view>
+
+
+>>>>>>> Stashed changes
