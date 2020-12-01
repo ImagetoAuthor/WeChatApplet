@@ -32,7 +32,7 @@
     },{  
       "selectedIconPath": "/pictures/personal.png",  
       "iconPath": "/pictures/personal.png",  
-      "pagePath": "pages/result/result",  
+      "pagePath": "pages/history/history",  
       "text": "个人中心"  
    }
   ]  
