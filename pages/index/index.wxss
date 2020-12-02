@@ -27,8 +27,16 @@
 .userinfo-nickname {
   color: #aaa;
 }
+<<<<<<< Updated upstream
 
 
 .usermotto {
   margin-top: 300px;
+=======
+.Van {
+  display:flex;                    
+ justify-content: center; 
+  width: 210px;
+  height: 250px;
+>>>>>>> Stashed changes
 }

@@ -11,6 +11,7 @@
   </view>
   <view class ="userlist">
     <text>\n</text>
+<<<<<<< Updated upstream
     <navigator url="/pages/upload/upload" open-type="redirect" hover-class="other-navigator-hover">{{upload}}</navigator>
     <text>\n</text>
     <navigator url="/pages/history/history" open-type="redirect" hover-class="other-navigator-hover">{{history}}</navigator>
@@ -19,6 +20,13 @@
 
 
 
+=======
+    <view class="Van">
+      <image src="/pictures/girl_in_pearl.jpg" class="in-image"></image>
+    </view>
+  </view>
+  <text>\n\n\n\n\n\n\n\n\n\n</text>
+>>>>>>> Stashed changes
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
