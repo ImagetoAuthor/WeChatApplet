@@ -34,15 +34,6 @@
   color: #aaa;
 }
 
-.imagesize {
-  display:flex;                    
- justify-content: center; 
-}
-
-.imagesize image {
-  width:50rpx;
-  height:50rpx;
-}
 
 .Van {
   display:flex;                    

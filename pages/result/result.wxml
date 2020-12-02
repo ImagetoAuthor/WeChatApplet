@@ -1,2 +1,9 @@
 <!--pages/result/result.wxml-->
-<text>pages/result/result.wxml</text>
+<image class='background' src="/pictures/starnight.png" mode="aspectFill"></image>
+
+
+<view class='imagesize'>
+      <image src="/pictures/history.png" class="in-image"></image>
+</view>
+<text>\n</text>
+<navigator url="/pages/history/history" class="link" open-type="redirect" hover-class="other-navigator-hover">{{history}}</navigator>
