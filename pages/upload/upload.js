@@ -5,12 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: [{
-      st_name: "查询画作",
-      }, {
-      st_name: "自我检验",
-      }],
-      index: 0,
+
   },
 
   /**
@@ -19,7 +14,9 @@ Page({
   onLoad: function (options) {
 
   },
-
+  onClick: function (){
+    console.log("mlj")
+ },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -73,11 +70,8 @@ Page({
     wx.chooseImage({
       count: 1,
     })
-  }
+  },
 
-
-<<<<<<< Updated upstream
-=======
   //添加上传图片
   chooseImageTap: function () {
     var that = this;
@@ -130,11 +124,5 @@ Page({
       }
     })
   },
-  listenerPickerSelected: function (e) {
-    //改变index值，通过setData()方法重绘界面
-    this.setData({
-    index: e.detail.value
-    });
-    },
->>>>>>> Stashed changes
+ 
 })

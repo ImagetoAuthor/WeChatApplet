@@ -11,8 +11,6 @@
   z-index: -1;
 }
 
-<<<<<<< Updated upstream
-=======
 .link {
   font-family: "STHeiti";
   font-size: xx-large;
@@ -28,12 +26,3 @@
   border-left-width:11px;
   border-right-width: 11px;
 }
-.select{
-  background: rgb(255, 255, 255);
-  height: 33px;
-  width: 180rpx;
-  align-items: center;
-}
-
->>>>>>> Stashed changes
-
