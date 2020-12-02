@@ -4,7 +4,22 @@
   <text>\n</text>
   <text class="link">提交图片</text>
   <text>\n\n\n\n\n</text>
-  <image bindtap="chooseImageTap" class ="addpicture"  src="/pictures/add.jpg" style="height: 222px;width: 222px;"></image>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+  <text class="link2">请选上传图片内容 {{array[index]}}</text>
+  </picker> 
+  <text>\n\n\n</text>
+
+  <view>
+    <view>
+      <view wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+        <image src="{{item}}"data-index="{{index}}" mode="aspectFill" bindtap="previewImg">
+          <icon type='cancel' data-index="{{index}}" catchtap="deleteImg"></icon>
+        </image>
+      </view>
+    </view>
+    <button bindtap="chooseImg" type='primary'>拍照  / 上传</button>
+  </view>
+
 </view>
 
 
