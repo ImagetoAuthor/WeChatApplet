@@ -6,7 +6,6 @@ Page({
   data: {
     motto: 'copyright © （中国海洋大学）刘海龙，马良吉，吕晓龙，宋江，余泽芃',
     upload: '提交图片',
-    history: '历史记录',
     userinfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')

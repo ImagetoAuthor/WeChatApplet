@@ -1,1 +1,32 @@
-/* pages/result.wxss */
+/* pages/result/result.wxss */
+.background {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}
+
+
+
+.imagesize {
+  display:flex;                    
+ justify-content: center; 
+}
+
+.imagesize image {
+  width:50rpx;
+  height:50rpx;
+}
+
+.link {
+  font-family: "STHeiti";
+  background: rgb(255, 255, 255);
+  height: 18px;
+  width: 150rpx;
+  align-items: center;
+  border-style: ridge;
+  border-color: rgb(9, 100, 241);
+  padding-left: 20px;
+  margin-left: 50px;
+}

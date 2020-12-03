@@ -26,3 +26,8 @@
   border-left-width:11px;
   border-right-width: 11px;
 }
+.link2 {
+  background: rgb(255, 255, 255);
+  height: 20px;
+  width: 200rpx;
+}
