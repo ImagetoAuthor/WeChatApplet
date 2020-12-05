@@ -7,8 +7,7 @@
   <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
   <text class="link2">请选上传图片内容 {{array[index]}}</text>
   </picker> 
-  <text>\n\n\n</text>
-
+  <text>\n\n</text>
   <view>
     <view>
       <view wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
@@ -18,8 +17,10 @@
       </view>
     </view>
     <button bindtap="chooseImg" type="primary" wx:if="{{isShowAdd}}">拍照  / 上传</button>
-    <text>\n\n</text>
+    <text>\n</text>
     <button bindtap="deleteImg" type="primary" wx:if="{{isShowDelete}}">删除图片</button>
+    <text>\n</text>
+    <button bindtap="submitImg" type="primary" wx:if="{{isShowSubmit}}">提交</button>
   </view>
 
 </view>
