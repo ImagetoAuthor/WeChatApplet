@@ -7,6 +7,7 @@ Page({
   data: {
     isShowAdd:true,
     isShowDelete: false,
+    isShowSubmit: false,
     imgs: [],
     index: 0,
     showuIndex: 0,
@@ -146,7 +147,8 @@ Page({
             if (imgs.length >= 1){///////////////////////////////////////////////////////////////////////////////
               that.setData({
                 isShowAdd: false,
-                isShowDelete: true
+                isShowDelete: true,
+                isShowSubmit: true
               });
             }
           }
@@ -166,7 +168,8 @@ Page({
     this.setData({
       imgs: imgs,
       isShowAdd: true,
-      isShowDelete: false
+      isShowDelete: false,
+      isShowSubmit: false
     });
   },
   // 预览图片
