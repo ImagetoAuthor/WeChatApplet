@@ -17,7 +17,9 @@
         </image>
       </view>
     </view>
-    <button bindtap="chooseImg" type='primary'>拍照  / 上传</button>
+    <button bindtap="chooseImg" type="primary" wx:if="{{isShowAdd}}">拍照  / 上传</button>
+    <text>\n\n</text>
+    <button bindtap="deleteImg" type="primary" wx:if="{{isShowDelete}}">删除图片</button>
   </view>
 
 </view>

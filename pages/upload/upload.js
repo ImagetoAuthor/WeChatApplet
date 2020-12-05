@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isShowAdd:true,
+    isShowDelete: false,
     imgs: [],
     index: 0,
     showuIndex: 0,
@@ -108,65 +110,12 @@ Page({
       count: 1,
     })
   },
-/*
-  //添加上传图片
-  chooseImageTap: function () {
-    var that = this;
-    wx.showActionSheet({
-      itemList: ['从相册中选择', '拍照'],
-      itemColor: "#00000",
-      success: function (res) {
-        if (!res.cancel) {
-          if (res.tapIndex == 0) {
-            that.chooseWxImage('album')
-          } else if (res.tapIndex == 1) {
-            that.chooseWxImage('camera')
-          }
-        }
-      }
-    })
-  },
-  // 图片本地路径
-  chooseWxImage: function (type) {
-    var that = this;
-    var imgsPaths = that.data.imgs;
-    wx.chooseImage({
-      sizeType: ['original', 'compressed'],
-      sourceType: [type],
-      success: function (res) {
-        console.log(res.tempFilePaths[0]);
-        that.upImgs(res.tempFilePaths[0], 0) //调用上传方法
-      }
-    }) 
-  },
-  //上传服务器
-  upImgs: function (imgurl, index) {
-    var that = this;
-    wx.uploadFile({
-      url: 'https://xxxxxxxxxxxxxxxxxxxxxxxxxxxx',//
-      filePath: imgurl,
-      name: 'file',
-      header: {
-        'content-type': 'multipart/form-data'
-      },
-      formData: null,
-      success: function (res) {
-        console.log(res) //接口返回网络路径
-        var data = JSON.parse(res.data)
-          that.data.picPaths.push(data['msg'])
-          that.setData({
-            picPaths: that.data.picPaths
-          })
-          console.log(that.data.picPaths)
-      }
-    })
-  },
- */
+
   // 上传图片
   chooseImg: function (e) {
     var that = this;
     var imgs = this.data.imgs;
-    if (imgs.length >= 9) {
+    if (imgs.length >= 1) {//////
       this.setData({
         lenMore: 1
       });
@@ -187,13 +136,19 @@ Page({
         var imgs = that.data.imgs;
         // console.log(tempFilePaths + '----');
         for (var i = 0; i < tempFilePaths.length; i++) {
-          if (imgs.length >= 9) {
+          if (imgs.length >= 1) {////
             that.setData({
               imgs: imgs
             });
             return false;
           } else {
             imgs.push(tempFilePaths[i]);
+            if (imgs.length >= 1){///////////////////////////////////////////////////////////////////////////////
+              that.setData({
+                isShowAdd: false,
+                isShowDelete: true
+              });
+            }
           }
         }
         // console.log(imgs);
@@ -209,7 +164,9 @@ Page({
     var index = e.currentTarget.dataset.index;
     imgs.splice(index, 1);
     this.setData({
-      imgs: imgs
+      imgs: imgs,
+      isShowAdd: true,
+      isShowDelete: false
     });
   },
   // 预览图片
