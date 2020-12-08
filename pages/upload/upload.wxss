@@ -13,7 +13,7 @@
 
 .link {
   font-family: "STHeiti";
-  font-size: xx-large;
+  font-size: 50rpx;
   background: rgb(255, 255, 255);
   height: 33px;
   width: 261rpx;
