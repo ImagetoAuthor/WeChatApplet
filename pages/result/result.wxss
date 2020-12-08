@@ -12,6 +12,7 @@
  justify-content: center; 
   width: 210px;
   height: 250px;
+  margin-left: 180rpx;
 }
 
 .imagesize {
