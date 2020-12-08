@@ -26,12 +26,13 @@
 
 .link {
   font-family: "STHeiti";
+  font-size: 31rpx;
   background: rgb(255, 255, 255);
-  height: 18px;
+  height: 32rpx;
   width: 150rpx;
   align-items: center;
   border-style: ridge;
   border-color: rgb(9, 100, 241);
-  padding-left: 20px;
-  margin-left: 50px;
+  padding-left: 33rpx;
+  margin-left: 275rpx;
 }
