@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/upload/upload",
     "pages/history/history",
-    "pages/result/result"
+    "pages/result/result",
+    "pages/useragreement/useragreement"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,27 +15,29 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-
-  "tabBar": {  
-   "color": "#a9b7b7",  
-   "selectedColor": "#11cd6e",  
-   "borderStyle": "black" ,
-   "list": [{  
-      "selectedIconPath": "/pictures/home.png",  
-      "iconPath": "pictures/home.png",  
-      "pagePath": "pages/index/index",  
-      "text": "首页"  
-    }, {  
-      "selectedIconPath": "/pictures/img.png",  
-      "iconPath": "/pictures/img.png",  
-      "pagePath": "pages/upload/upload",  
-      "text": "上传"  
-    },{  
-      "selectedIconPath": "/pictures/personal.png",  
-      "iconPath": "/pictures/personal.png",  
-      "pagePath": "pages/result/result",  
-      "text": "个人中心"  
-   }
-  ]  
-  } 
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "/pictures/home.png",
+        "iconPath": "pictures/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/pictures/img.png",
+        "iconPath": "/pictures/img.png",
+        "pagePath": "pages/upload/upload",
+        "text": "上传"
+      },
+      {
+        "selectedIconPath": "/pictures/personal.png",
+        "iconPath": "/pictures/personal.png",
+        "pagePath": "pages/result/result",
+        "text": "个人中心"
+      }
+    ]
+  }
 }

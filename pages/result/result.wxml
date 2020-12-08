@@ -1,9 +1,12 @@
 <!--pages/result/result.wxml-->
 <image class='background' src="/pictures/starnight.png" mode="aspectFill"></image>
 
-
-<view class='imagesize'>
-      <image src="/pictures/history.png" class="in-image"></image>
+<view class="Van">
+      <image src="/pictures/girl_in_pearl.jpg" class="in-image"></image>
 </view>
-<text>\n</text>
-<navigator url="/pages/history/history" class="link" open-type="redirect" hover-class="other-navigator-hover">{{history}}</navigator>
+
+<text>\n\n\n\n\n\n</text>
+<button bindtap="chooseHistory" type="primary" >{{history}}</button>
+
+<text>\n\n</text>
+<button bindtap="chooseUser" type="primary" >{{user}}</button>

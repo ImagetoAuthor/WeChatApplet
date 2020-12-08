@@ -1,19 +1,18 @@
-// pages/result/result.js
+// pages/useragreement/useragreement.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    history: '历史记录',
-    user: '用户协议',
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+
   },
 
   /**
@@ -63,17 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  chooseHistory: function(e){
-    wx.navigateTo({
-      url: '/pages/history/history',
-    })
-  },
-
-  chooseUser: function(e){
-    wx.navigateTo({
-      url: '/pages/useragreement/useragreement',
-    })
   }
 })

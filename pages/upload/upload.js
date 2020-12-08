@@ -185,4 +185,7 @@ Page({
       urls: imgs
     })
   },
+  submitImg: function(e){
+    
+  }
 })
