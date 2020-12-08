@@ -19,7 +19,7 @@
   align-items: center;
   border-style: ridge;
   border-color: rgb(9, 100, 241);
-  padding-left: 39rpx;
+  padding-left: 31rpx;
   border-top-width:15rpx;
   border-bottom-width:15rpx;
   border-left-width:15rpx;

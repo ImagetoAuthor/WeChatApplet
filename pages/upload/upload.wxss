@@ -15,8 +15,8 @@
   font-family: "STHeiti";
   font-size: 50rpx;
   background: rgb(255, 255, 255);
-  height: 60rpx;
-  width: 261rpx;
+  height: 55rpx;
+  width: 221rpx;
   align-items: center;
   border-style: ridge;
   border-color: rgb(9, 100, 241);
