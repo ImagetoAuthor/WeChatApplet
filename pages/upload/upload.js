@@ -185,7 +185,22 @@ Page({
       urls: imgs
     })
   },
-  submitImg: function(e){
-    
+  submitImg: function(e) {
+    // 登录到服务端获取token
+    wx.request({
+      header: {
+        'Accept': 'application/json'
+      },
+      method: "POST",
+      url: "http://hyperlj.xyz/Api/images", // 后端路径
+      data: {
+        "image" : this.data.imgs
+      },
+      success: function (res) {
+        // 回调函数,保存token
+        console.log(res)
+        app.globalData.token = res.data.token
+      }
+    })
   }
 })

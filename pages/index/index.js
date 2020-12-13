@@ -51,6 +51,25 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  login: function() {
+    // 登录到服务端获取token
+    wx.request({
+      header: {
+        'Accept': 'application/json'
+      },
+      method: "POST",
+      url: "http://hyperlj.xyz/wdApi/login", // 后端路径
+      data: {
+        "name": app.globalData.userInfo.nickName,
+        "head": app.globalData.userInfo.avatarUrl,
+        "code": app.code
+      },
+      success: function (res) {
+        // 回调函数,保存token
+        console.log(res)
+        app.globalData.token = res.data.token
+      }
+    })
   }
-
 })

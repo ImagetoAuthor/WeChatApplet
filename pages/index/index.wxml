@@ -19,6 +19,9 @@
     <text>\n\n\n\n\n\n</text>
 
   </view>
+
+<button open-type="getUserInfo" bindgetuserinfo="login">获取用户信息</button>
+
   <text>\n\n</text>
 
 
