@@ -1,4 +1,7 @@
 /* pages/useragreement/useragreement.wxss */
+page{
+  background:  -webkit-linear-gradient(left,skyblue,rgb(66, 198, 241),rgb(67, 159, 252));
+}
 .title{
   font-size: 30px;
 }
