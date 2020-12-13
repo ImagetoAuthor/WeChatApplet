@@ -1,2 +1,4 @@
 <!--pages/useragreement/useragreement.wxml-->
-<text class='title'>pages/useragreement/useragreement.wxml</text>
+<text class='title'>用户协议</text>
+<text>\n\n</text>
+<text>本程序承诺不会泄露用户隐私信息</text>
