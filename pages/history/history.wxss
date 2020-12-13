@@ -12,16 +12,16 @@
 
 .link {
   font-family: "STHeiti";
-  font-size: 60rpx;
-  background: rgb(255, 255, 255);
+  font-size: 50rpx;
+  background:  -webkit-linear-gradient(left,skyblue,deepskyblue,dodgerblue);
   height: 60rpx;
-  width: 261rpx;
+  width: 240rpx;
   align-items: center;
   border-style: ridge;
-  border-color: rgb(9, 100, 241);
+  border-color: rgb(65, 133, 236);
   padding-left: 31rpx;
-  border-top-width:15rpx;
-  border-bottom-width:15rpx;
-  border-left-width:15rpx;
-  border-right-width:15rpx;
+  border-top-width:5rpx;
+  border-bottom-width:5rpx;
+  border-left-width:5rpx;
+  border-right-width:5rpx;
 }
