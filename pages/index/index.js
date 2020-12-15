@@ -63,12 +63,13 @@ Page({
       data: {
         "name": app.globalData.userInfo.nickName,
         "head": app.globalData.userInfo.avatarUrl,
-        "code": app.code
+        "code": app.globalData.js_code,
       },
       success: function (res) {
         // 回调函数,保存token
         console.log(res)
-        app.globalData.token = res.data.token
+        app.globalData.token = res.data.data.token
+        console.log(app.globalData.token)
       }
     })
   }

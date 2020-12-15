@@ -10,10 +10,7 @@ App({
     wx.login({
       success: res => {
          // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        wx.request({
-          url: "http://hyperlj.xyz/wdapi/login",  // 后端路径
-          data:{"code":res.code},
-        })
+        this.globalData.js_code = res.code
       }
     })
     // 获取用户信息
@@ -38,6 +35,7 @@ App({
     })
   },
   globalData: {
+    js_code: null,
     userInfo: null,
     token: null
   }
