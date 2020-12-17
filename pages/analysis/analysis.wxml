@@ -1,2 +1,4 @@
 <!--pages/analysis/analysis.wxml-->
-<text>pages/analysis/analysis.wxml</text>
+<view class="container">
+
+</view>

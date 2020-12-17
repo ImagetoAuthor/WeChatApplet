@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/analysis/analysis",
     "pages/home/home",
     "pages/index/index",
-    "pages/mine/mine",
-    "pages/analysis/analysis"
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "light",
