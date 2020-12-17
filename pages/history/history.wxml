@@ -1,6 +1,0 @@
-<!--pages/history/history.wxml-->
-<view class="container">
-  <image class='background' src="/pictures/starnight.png" mode="aspectFill"></image>
-  <text>\n</text>
-  <text class="link">历史记录</text>
-</view>
