@@ -1,13 +1,16 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+	<view id="index-main">
+     <image src="/icons/icon_logo.jpg" id="index-logo"></image>
+     <text style="margin-top: 50rpx;">~ 看图识作者 ~</text>
+
+     <button wx:if="{{!hasUserInfo && canIUse}}" id="index-button" 
+     open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+
+     <view id="index-userInfo" wx:else>
+				<image bindtap="onClickWithHeader" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        
+        <text style="color: #aaa; margin-top: 50rpx;">点击头像体验小程序</text>
+     </view> 
+	</view> 
 </view>

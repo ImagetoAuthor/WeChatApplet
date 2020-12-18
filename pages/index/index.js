@@ -4,16 +4,18 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
+
+  //点击头像上传信息到服务端并且跳转到首页
+  onClickWithHeader: function() {
+    wx.switchTab({
+      url: '../home/home',
     })
   },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
