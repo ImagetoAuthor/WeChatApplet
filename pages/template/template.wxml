@@ -1,0 +1,20 @@
+
+<template name="showhistory">
+<view class="layout">    
+   <view wx:if="{{mentor_image_uri==null}}">
+    <!-- 默认图片地址 -->
+        <image class="widget_arrow" src="/icons/icon_mine_normal.png" mode="aspectFill"></image>
+    </view>
+    <view wx:else>
+        <image class="widget_arrow" src="{{mentor_image_uri}}" mode="aspectFill"></image>
+    </view>
+  
+    <view class='info'>
+        <text class="style1"><span>类型：</span>{{style}}</text>
+        <text class="style2"><span>评析：</span>{{evaluate}}</text>
+    </view>
+</view>
+
+<view class="hr"></view>
+
+</template>

@@ -1,4 +1,21 @@
 <!--pages/analysis/analysis.wxml-->
 <view class="container">
-
+    <view id="analysis-main">
+    <image src="/icons/girl_in_pearl.jpg" id="image"/>
+    <text>\n\n</text>
+    <view>
+    <view>
+      <view wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+        <image src="{{item}}"data-index="{{index}}" mode="aspectFill" bindtap="previewImg">
+          <icon type='cancel' data-index="{{index}}" catchtap="deleteImg"></icon>
+        </image>
+      </view>
+    </view>
+    <button bindtap="chooseImg" type="default" wx:if="{{isShowAdd}}" style="margin-top: 350rpx">拍照  / 上传</button>
+    <text>\n</text>
+    <button bindtap="deleteImg" type="default" wx:if="{{isShowDelete}}">删除图片</button>
+    <text>\n</text>
+    <button bindtap="submitImg" type="default" wx:if="{{isShowSubmit}}">提交</button>
+    </view>
+    </view>
 </view>

@@ -1,2 +1,18 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<import src="/pages/template/template.wxml" />
+<text>\n\n\n</text>
+<view class='mytop-box'>
+  <view class="mytop-avatar">
+    <open-data  type="userAvatarUrl"></open-data>
+  </view>
+  <view class='mytop-username'>
+    <open-data type="userNickName"></open-data>
+  </view>
+</view>
+<text>\n\n</text>
+ <!-- 分割线 -->
+<view class="divLine"></view>
+<text>\n\n</text>
+<block wx:for="{{message}}" wx:key="id">
+  <template  is="showhistory" data="{{...item}}"></template>
+</block>
