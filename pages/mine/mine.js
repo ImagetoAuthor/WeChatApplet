@@ -5,7 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    message:[{
+      style:"艺术赏析",
+      evaluate:"这是梵高的真迹",
+    },{
+      style:"绘画评析",
+      evaluate:"这是很接近梵高的真迹",
+    }]
   },
 
   /**
