@@ -1,2 +1,19 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="title">
+  <text>Artists\n</text>
+</view>
+<scroll-view class="scroll" scroll-y="true">
+  <block wx:for="{{artists}}" wx:key="*this">
+    <view class="list">
+      <view class="info">
+        <text>作者名称：{{item.name}}\n</text>
+        <text>作者简介：{{item.introduce}}</text>
+      </view>
+      <view class="img">
+        <image class="list-img" src="{{item.url}}" mode="cover"></image>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+
+
