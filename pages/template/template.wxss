@@ -1,49 +1,26 @@
-.name {
-  text-align: center;
-}
-.layout{
+#item{
   display: flex;
   flex-direction: row;
-  margin-left: 10px;
-  background-color: #d1cccc;
-  border-radius: 30px;
-  border-width: 5px;
-  border-color: black;
+  margin: 30rpx 50rpx 0rpx 50rpx;
+  background-color: #f8f9fb;
+  border-radius: 30rpx;
 }
-.widget_arrow {
-  margin-top: 20px;
-  height: 150px;
-  width: 150px;
+#item-image{
+  border-radius: 30rpx;
+  height: 200rpx;
+  width: 200rpx;
 }
-
-.info{
+#item-info{
   display:flex;
   flex-direction:column;
   margin-left:40rpx;
 }
-.style1 {
+#text-type {
   font-size: 20px;
-  width: 370rpx;
-  margin: auto;
   margin-top: 10px;
 }
-.style1 span{
-  font-weight: 600;
-}
-
-.style2 {
+#text-analysis {
   font-size: 14px;
-  width: 370rpx;
-  margin: auto;
+  margin-top: 10rpx;
   color: #575454
-}
-.style2 span{
-  font-weight: 600;
-}
-
-
-.hr {
-  height: 5px;
-  width: 100%;
-  background: #ffffff;
 }

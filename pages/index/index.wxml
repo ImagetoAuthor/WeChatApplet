@@ -4,7 +4,7 @@
      <image src="/icons/icon_logo.jpg" id="index-logo"></image>
      <text style="margin-top: 50rpx;">~ 看图识作者 ~</text>
 
-     <button wx:if="{{!hasUserInfo && canIUse}}" id="index-button" 
+     <button wx:if="{{!hasUserInfo && canIUse}}" class="button" 
      open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
 
      <view id="index-userInfo" wx:else>

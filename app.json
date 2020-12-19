@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/analysis/analysis",
+    "pages/index/index",
     "pages/home/home",
     "pages/mine/mine"
   ],
@@ -23,7 +23,8 @@
       },
       {
         "pagePath": "pages/analysis/analysis",
-        "iconPath": "icons/icon_add.png",
+        "iconPath": "icons/icon_add_normal.png",
+        "selectedIconPath": "icons/icon_add_selected.png",
         "text": "　"
       },
       {

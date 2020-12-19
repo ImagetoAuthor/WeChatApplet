@@ -11,9 +11,6 @@ Page({
 
   //点击头像上传信息到服务端并且跳转到首页
   onClickWithHeader: function() {
-
-    console.log(app.globalData.code)
-
     // 上传信息到服务器
     wx.request({
       url: 'http://hyperlj.xyz/wdApi/login',
