@@ -6,8 +6,8 @@
   <block wx:for="{{artists}}" wx:key="*this">
     <view class="list">
       <view class="info">
-        <text>作者名称：{{item.name}}\n</text>
-        <text>作者简介：{{item.introduce}}</text>
+        <text style="line-height:60rpx">Artist: {{item.name}}\n</text>
+        <text>简介：{{item.introduce}}</text>
       </view>
       <view class="img">
         <image class="list-img" src="{{item.url}}" mode="cover"></image>

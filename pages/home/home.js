@@ -9,7 +9,7 @@ Page({
       {
         name: '大脸猫',
         url: '../../icons/icon_logo.jpg',
-        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
+        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpgasdgasegwasefaswegewdeasdgwettp://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpgasdgasegwasefasweg'
       },
       {
         name: '大脸猫爱吃鱼',
@@ -23,7 +23,7 @@ Page({
       }, {
         name: '大脸猫爱吃鱼',
         url: 'http://f10.baidu.com/it/u=121654667,1482133440&fm=72',
-        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
+        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpgasdfasdgasdgasdgasdgasd'
       },
       {
         name: '大脸猫爱吃鱼',
@@ -51,14 +51,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if(!this.data.artists) {
+      wx.request({
+        url: 'https://hyperlj.xyz/wdApi/history',
+        method: "GET",
+        header:{
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        success (res) {
+          this.data.artists = res.data
+        }
+      })
 
+    }
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**
