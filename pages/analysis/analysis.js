@@ -1,60 +1,19 @@
-// pages/analysis/analysis.js
+// pages/upload.js
+
+const app = getApp()
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+    isSelected: false, // 是否选择了图片
+    image: "/icons/girl_in_pearl.jpg"
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+    // 当跳转到该页面时启动选择图片
+    // this.onClickWithChooseImg()
   },
 
   /**
@@ -62,5 +21,69 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  
+  // 上传图片
+  onClickWithChooseImg: function (e) {
+    var that = this;
+
+    wx.chooseImage({
+      count: 1, // 默认9
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        if (res.tempFilePaths.length > 0) {
+          that.setData({
+            image: res.tempFilePaths[0],
+            isSelected: true
+          })
+        }
+      }
+    });
+  },
+  onClickWithSubmitImg: function (e) {
+    if (this.data.isSelected) {
+      // 登录到服务端获取token
+      wx.showLoading({
+        title: '加载中...',
+      });
+      wx.uploadFile({
+        url: 'http://hyperlj.xyz/wdApi/analysis',
+        filePath: this.data.image,
+        name: 'image',
+        header: {
+          'Accept': 'application/json',
+          'Authorization': app.globalData.token
+        },
+        success: (result) => {
+          console.log(result)
+          wx.hideLoading();
+          wx.showToast({
+            title: '成功',
+            image: '/icons/icon_success.png',
+            duration: 1500,
+          });
+        },
+        fail: (res) => {
+          console.log(res)
+          wx.hideLoading();
+          wx.showToast({
+            title: '上传失败',
+            image: '/icons/icon_fail.png',
+            duration: 1500,
+          });
+        },
+        complete: (res) => {
+          // 修改UI
+        }
+      });
+    } else {
+      wx.showToast({
+        title: '请先选择图片',
+        image: '/icons/icon_warning.png',
+        duration: 1500,
+      })
+    }
   }
 })

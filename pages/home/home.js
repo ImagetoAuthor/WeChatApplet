@@ -5,21 +5,72 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    artists:[
+      {
+        name: '大脸猫',
+        url: '../../icons/icon_logo.jpg',
+        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpgasdgasegwasefaswegewdeasdgwettp://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpgasdgasegwasefasweg'
+      },
+      {
+        name: '大脸猫爱吃鱼',
+        url: 'http://img3.imgtn.bdimg.com/it/u=1417732605,3777474040&fm=26&gp=0.jpg',
+        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
+      },
+      {
+        name: '大脸猫爱吃鱼',
+        url: 'http://img3.imgtn.bdimg.com/it/u=1417732605,3777474040&fm=26&gp=0.jpg',
+        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
+      }, {
+        name: '大脸猫爱吃鱼',
+        url: 'http://f10.baidu.com/it/u=121654667,1482133440&fm=72',
+        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpgasdfasdgasdgasdgasdgasd'
+      },
+      {
+        name: '大脸猫爱吃鱼',
+        url: 'http://f10.baidu.com/it/u=121654667,1482133440&fm=72',
+        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
+      },
+      {
+        name: '大脸猫爱吃鱼',
+        url: 'http://img3.imgtn.bdimg.com/it/u=1417732605,3777474040&fm=26&gp=0.jpg',
+        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
+      },
+      {
+        name: '大脸猫爱吃鱼',
+        url: 'http://img4.imgtn.bdimg.com/it/u=2748975304,2710656664&fm=26&gp=0.jpg',
+        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
+      }, {
+        name: '大脸猫爱吃鱼',
+        url: 'http://img2.imgtn.bdimg.com/it/u=1561660534,130168102&fm=26&gp=0.jpg',
+        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if(!this.data.artists) {
+      wx.request({
+        url: 'https://hyperlj.xyz/wdApi/history',
+        method: "GET",
+        header:{
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        success (res) {
+          this.data.artists = res.data
+        }
+      })
 
+    }
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**

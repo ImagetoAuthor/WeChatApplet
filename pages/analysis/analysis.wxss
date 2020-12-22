@@ -1,1 +1,11 @@
 /* pages/analysis/analysis.wxss */
+#analysis-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+#image{
+    height: 300rpx;
+    width: 300rpx;
+}
