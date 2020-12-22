@@ -1,7 +1,7 @@
 // pages/mine/mine.js
 Page({
   data: {
-    message:[{
+    message:[/*{
       image: "/icons/girl_in_pearl.jpg",
       style: "艺术赏析",
       evaluate: "这是梵高的真迹",
@@ -9,7 +9,7 @@ Page({
       image: "/icons/girl_in_pearl.jpg",
       style:"绘画评析",
       evaluate:"这是很接近梵高的真迹",
-    }]
+    }*/]
   },
 
   /**
@@ -17,7 +17,7 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: "", //仅为示例，并非真实的接口地址  url写api接口
+      url: "http://hyperlj.xyz/wdApi/analysis", //仅为示例，并非真实的接口地址  url写api接口
 
       success: function (res) {
        this.message = res.data.data;
