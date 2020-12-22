@@ -52,6 +52,10 @@ Page({
    */
   onLoad: function (options) {
     if(!this.data.artists) {
+      console.log(1)
+      wx.showLoading({
+        title: '加载中...',
+      });
       wx.request({
         url: 'https://hyperlj.xyz/wdApi/history',
         method: "GET",
@@ -60,7 +64,22 @@ Page({
           'Content-Type': 'application/json'
         },
         success (res) {
-          this.data.artists = res.data
+          wx.hideLoading();
+          if (res.statusCode == 200) {
+            wx.showToast({
+              title: '成功',
+              icon: 'success',
+              duration: 1500,
+            });
+            this.data.artists = res.data
+          } else {
+            wx.showToast({
+              title: '未知错误',
+              image: '../../icons/icon_fail.png',
+              duration: 1500,
+            });
+          }
+          
         }
       })
 
