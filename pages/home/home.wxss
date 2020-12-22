@@ -1,9 +1,9 @@
 
 page {
   height: 95%;
-  width: 90%;
+  width: 94%;
   margin-top: 5%;
-  margin-left: 4%;
+  margin-left: 2%;
   border: 3px black solid;
   border-radius: 25px;
   display: absolute;
