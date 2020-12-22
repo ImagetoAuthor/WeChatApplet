@@ -18,7 +18,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.request({
+      url: "", //仅为示例，并非真实的接口地址  url写api接口
 
+      success: function (res) {
+       this.message = res.data.data;
+       /*
+        wx.setStorage({    //setStorage 存储到Storage缓存中
+          key: 'message',   //本地缓存中指定的key
+          data: res.data
+        });*/
+      }
+    })
+    
   },
 
   /**
