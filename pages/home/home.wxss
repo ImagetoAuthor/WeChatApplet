@@ -1,14 +1,14 @@
 
 page {
-  /* margin: 10% 5% 10% 5%; */
-  height: 90%;
+  height: 95%;
   width: 90%;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 4%;
   border: 3px black solid;
   border-radius: 25px;
   display: absolute;
   align-items: center; 
+  position: fixed;
 }
 .title {
   /* display: flex; */
