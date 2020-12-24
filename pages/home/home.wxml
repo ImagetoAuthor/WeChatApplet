@@ -7,10 +7,10 @@
     <view class="list">
       <view class="info">
         <text style="line-height:60rpx">Artist: {{item.name}}\n</text>
-        <text>简介：{{item.introduce}}</text>
+        <text>简介：{{item.info}}</text>
       </view>
       <view class="img">
-        <image class="list-img" src="{{item.url}}" mode="cover"></image>
+        <image class="list-img" src="{{item.img}}" mode="cover"></image>
       </view>
     </view>
   </block>

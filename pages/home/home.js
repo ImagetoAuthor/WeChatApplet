@@ -1,89 +1,22 @@
 // pages/home/home.js
+const app = getApp()
+var jsonData = require('../../data/json.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    artists:[
-      {
-        name: '大脸猫',
-        url: '../../icons/icon_logo.jpg',
-        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpgasdgasegwasefaswegewdeasdgwettp://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpgasdgasegwasefasweg'
-      },
-      {
-        name: '大脸猫爱吃鱼',
-        url: 'http://img3.imgtn.bdimg.com/it/u=1417732605,3777474040&fm=26&gp=0.jpg',
-        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
-      },
-      {
-        name: '大脸猫爱吃鱼',
-        url: 'http://img3.imgtn.bdimg.com/it/u=1417732605,3777474040&fm=26&gp=0.jpg',
-        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
-      }, {
-        name: '大脸猫爱吃鱼',
-        url: 'http://f10.baidu.com/it/u=121654667,1482133440&fm=72',
-        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpgasdfasdgasdgasdgasdgasd'
-      },
-      {
-        name: '大脸猫爱吃鱼',
-        url: 'http://f10.baidu.com/it/u=121654667,1482133440&fm=72',
-        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
-      },
-      {
-        name: '大脸猫爱吃鱼',
-        url: 'http://img3.imgtn.bdimg.com/it/u=1417732605,3777474040&fm=26&gp=0.jpg',
-        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
-      },
-      {
-        name: '大脸猫爱吃鱼',
-        url: 'http://img4.imgtn.bdimg.com/it/u=2748975304,2710656664&fm=26&gp=0.jpg',
-        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
-      }, {
-        name: '大脸猫爱吃鱼',
-        url: 'http://img2.imgtn.bdimg.com/it/u=1561660534,130168102&fm=26&gp=0.jpg',
-        introduce: 'http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg'
-      }
-    ]
+    artists: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if(!this.data.artists) {
-      console.log(1)
-      wx.showLoading({
-        title: '加载中...',
-      });
-      wx.request({
-        url: 'https://hyperlj.xyz/wdApi/history',
-        method: "GET",
-        header:{
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        success (res) {
-          wx.hideLoading();
-          if (res.statusCode == 200) {
-            wx.showToast({
-              title: '成功',
-              icon: 'success',
-              duration: 1500,
-            });
-            this.data.artists = res.data
-          } else {
-            wx.showToast({
-              title: '未知错误',
-              image: '../../icons/icon_fail.png',
-              duration: 1500,
-            });
-          }
-          
-        }
-      })
-
-    }
+    this.setData({
+      artists: jsonData.dataList
+    })
   },
 
   /**
