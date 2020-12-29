@@ -1,15 +1,14 @@
 
 page {
-  /* margin: 10% 5% 10% 5%; */
-  height: 90%;
-  width: 90%;
-  margin-top: 10%;
-  margin-left: 4%;
+  height: 95%;
+  width: 94%;
+  margin-top: 5%;
+  margin-left: 2%;
   border: 3px black solid;
   border-radius: 25px;
   display: absolute;
-  flex-direction: column;
   align-items: center; 
+  position: fixed;
 }
 .title {
   /* display: flex; */
@@ -41,11 +40,15 @@ page {
 .info {
   margin-top: 5%;
   margin-left: 5%;
+  margin-bottom: 5%;
+  padding-right: 20rpx;
   font-family: 'SimSun';
   font-size: 30rpx;
-  height: 96%;
+  height: 75%;
   width: 60%;
-  word-wrap: break-word;
+  /* word-wrap: break-word; */
+  word-break:break-all;
+  overflow-y: scroll;
 
 }
 .img {

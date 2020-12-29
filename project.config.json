@@ -28,6 +28,10 @@
       "disablePlugins": [],
       "outputPath": ""
     },
+<<<<<<< HEAD
+=======
+    "enableEngineNative": false,
+>>>>>>> 5e5db36dfa40ecbe9492ae11930a4fe4b07e0e37
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,

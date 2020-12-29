@@ -57,13 +57,21 @@ Page({
           'Authorization': app.globalData.token
         },
         success: (result) => {
-          console.log(result)
           wx.hideLoading();
-          wx.showToast({
+          console.log(result)
+          if (result.statusCode == 200) {
+            wx.showToast({
             title: '成功',
             image: '/icons/icon_success.png',
             duration: 1500,
           });
+          } else {
+            wx.showToast({
+              title: '未知错误',
+              image: '/icons/icon_fail.png',
+              duration: 1500
+            })
+          }
         },
         fail: (res) => {
           console.log(res)
