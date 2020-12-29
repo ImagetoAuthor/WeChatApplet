@@ -49,7 +49,7 @@ Page({
         title: '加载中...',
       });
       wx.uploadFile({
-        url: 'http://hyperlj.xyz/wdApi/analysis',
+        url: 'https://hyperlj.xyz/painting/analysis',
         filePath: this.data.image,
         name: 'image',
         header: {

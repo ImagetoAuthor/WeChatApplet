@@ -1,4 +1,7 @@
 // pages/mine/mine.js
+
+const app = getApp()
+
 Page({
   data: {
     message:[{
@@ -12,10 +15,23 @@ Page({
     }]
   },
 
+  onShow: function (options) {
+    wx.request({
+      url: 'https://hyperlj.xyz/painting/history',
+      header: {
+        'Accepts': 'application/json',
+        'Authorization': app.globalData.token
+      },
+      success: (res)=> {
+        console.log(res)
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 })

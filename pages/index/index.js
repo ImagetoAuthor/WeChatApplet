@@ -13,7 +13,7 @@ Page({
   onClickWithHeader: function() {
     // 上传信息到服务器
     wx.request({
-      url: 'http://hyperlj.xyz/wdApi/login',
+      url: 'https://hyperlj.xyz/user/login',
       method: "POST",
       header:{
         'Accept': 'application/json',
@@ -26,7 +26,7 @@ Page({
       },
       success (res) {
         // 保存token
-        app.globalData.token = res.data.data.token
+        app.globalData.token = res.data.token
       }
     })
     // 跳转到首页
