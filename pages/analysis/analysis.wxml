@@ -4,7 +4,13 @@
     <image src="{{image}}" style="border-radius: 50%; margin-top: 20%;" id="image" bindtap="onClickWithChooseImg"/>
 
     <text style="color: #aaa; margin-top: 50rpx;" >点击选择图片</text>
-
+    
+    <view>
+      <text wx:if="{{isPredicted}}"> 你的作品有{{Similarty2}}0%像{{Artist2}}的作品\n </text>
+      <text wx:if="{{isPredicted}}"> 你的作品有{{Similarty3}}0%像{{Artist3}}的作品\n </text>
+      <text wx:if="{{isPredicted}}"> 你的作品有{{Similarty1}}0%像{{Artist1}}的作品 </text>
+    </view>
+    
     <button class="button" bindtap="onClickWithSubmitImg" >Submit</button>
   </view>
 </view>

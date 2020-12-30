@@ -1,11 +1,19 @@
 // pages/upload.js
 
 const app = getApp()
+var jsonData = require('../../data/json.js');
 
 Page({
   data: {
     isSelected: false, // 是否选择了图片
-    image: "/icons/girl_in_pearl.jpg"
+    image: "/icons/girl_in_pearl.jpg",
+    Artist1: 0,
+    Similarty1: 0,
+    Artist2: 0,
+    Similarty2: 0,
+    Artist3: 0,
+    Similarty3: 0,
+    isPredicted: false // 是否预测了结果
   },
 
   /**
@@ -43,6 +51,7 @@ Page({
     });
   },
   onClickWithSubmitImg: function (e) {
+    var that = this
     if (this.data.isSelected) {
       // 登录到服务端获取token
       wx.showLoading({
@@ -58,16 +67,41 @@ Page({
         },
         success: (result) => {
           wx.hideLoading();
-          console.log(result)
           if (result.statusCode == 200) {
             wx.showToast({
-            title: '成功',
-            image: '/icons/icon_success.png',
-            duration: 1500,
-          });
+              title: '成功',
+              image: '/icons/icon_success.png',
+              duration: 1500,
+            });
+            this.setData({
+              isPredicted: true
+            });
+            var json2map=JSON.parse(result.data)
+            var i = 0
+            for(var key in json2map) {
+              if(i == 0){
+                this.setData({
+                  Artist1: jsonData.dataList[key].name,
+                  Similarty1: json2map[key]
+                })
+              }
+              else if(i == 1){
+                this.setData({
+                  Artist2: jsonData.dataList[key].name,
+                  Similarty2: json2map[key]
+                })
+              }
+              else if(i == 2){
+                this.setData({
+                  Artist3: jsonData.dataList[key].name,
+                  Similarty3: json2map[key]
+                })
+              }
+              i++
+            }
           } else {
             wx.showToast({
-              title: '未知错误',
+              title: '图像过大',
               image: '/icons/icon_fail.png',
               duration: 1500
             })
