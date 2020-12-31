@@ -9,8 +9,8 @@
       <view style="width:25rpx;"></view>
       <view class="right">
         <text>{{Similarty2}}0%像{{Artist2}}的作品 </text>
-        <text style="margin-top:30rpx;">{{Similarty3}}0%像{{Artist3}}的作品\n </text>
-        <text style="margin-top:30rpx;">{{Similarty1}}0%像{{Artist1}}的作品\n </text>
+        <text style="margin-top:30rpx;" wx:if="{{Similarty3!=0}}">{{Similarty3}}0%像{{Artist3}}的作品\n </text>
+        <text style="margin-top:30rpx;" wx:if="{{Similarty1!=0}}">{{Similarty1}}0%像{{Artist1}}的作品\n </text>
       </view>
     </view> 
 

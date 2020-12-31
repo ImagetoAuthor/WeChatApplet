@@ -103,6 +103,7 @@ Page({
               }
               i++
             }
+            console.log(result.data)
           } else {
             wx.showToast({
               title: '图像过大',
