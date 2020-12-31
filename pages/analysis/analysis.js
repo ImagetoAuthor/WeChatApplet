@@ -13,9 +13,13 @@ Page({
     Similarty2: 0,
     Artist3: 0,
     Similarty3: 0,
-    isPredicted: false // 是否预测了结果
+    isPredicted: true // 是否预测了结果
   },
-
+  onLoad: function () {
+    this.setData({
+      artists: jsonData.dataList
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

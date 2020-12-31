@@ -9,3 +9,14 @@
     height: 300rpx;
     width: 300rpx;
 }
+
+.result {
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: row;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+}
