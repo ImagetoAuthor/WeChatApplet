@@ -8,9 +8,9 @@
       <view class="left">你的作品有: </view>
       <view style="width:25rpx;"></view>
       <view class="right">
-        <text>{{Similarty1}}0%像{{artists[Artist1].name}}的作品 </text>
-        <text style="margin-top:30rpx;">{{Similarty2}}0%像{{artists[Artist2].name}}的作品\n </text>
-        <text style="margin-top:30rpx;">{{Similarty3}}0%像{{artists[Artist3].name}}的作品\n </text>
+        <text>{{Similarty2}}0%像{{Artist2}}的作品 </text>
+        <text style="margin-top:30rpx;">{{Similarty3}}0%像{{Artist3}}的作品\n </text>
+        <text style="margin-top:30rpx;">{{Similarty1}}0%像{{Artist1}}的作品\n </text>
       </view>
     </view> 
 

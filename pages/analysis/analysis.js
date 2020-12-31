@@ -13,7 +13,7 @@ Page({
     Similarty2: 0,
     Artist3: 0,
     Similarty3: 0,
-    isPredicted: true // 是否预测了结果
+    isPredicted: false // 是否预测了结果
   },
   onLoad: function () {
     this.setData({
