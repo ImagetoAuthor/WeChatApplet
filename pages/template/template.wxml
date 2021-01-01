@@ -1,11 +1,9 @@
 <!-- history.template -->
 <template name="showHistory">
     <view id="item">
-        <image id="item-image" src="{{image}}" mode="aspectFill"></image>
-
+        <image id="item-image" src="{{url}}"></image>
         <view id="item-info">
-            <text id="text-type">{{style}}</text>
-            <text id="text-analysis">{{evaluate}}</text>
+            <text id="text-type">与{{Artist2}}的相似度：{{Similarty2}}0% </text>
         </view>
     </view>
 </template>

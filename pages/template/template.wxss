@@ -24,3 +24,8 @@
   margin-top: 10rpx;
   color: #575454
 }
+
+.theimage{
+  width: 50%;
+  height:50%
+}

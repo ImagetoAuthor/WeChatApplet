@@ -1,6 +1,7 @@
 /* pages/mine/mine.wxss */
 @import "/pages/template/template.wxss";
 
+
 #mineTop-box{
   margin-top: 150rpx;
   display: flex;
@@ -27,3 +28,4 @@
   margin: 50rpx 10% 50rpx 10%;
   height: 5rpx;
  }
+

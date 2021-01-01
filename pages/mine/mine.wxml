@@ -19,5 +19,4 @@
   <block wx:for="{{message}}" wx:key="id">
     <template is="showHistory" data="{{...item}}"></template>
   </block>
-
 </view>
