@@ -1,7 +1,7 @@
 <!-- history.template -->
 <template name="showHistory">
     <view id="item">
-        <image id="item-image" src="{{url}}"></image>
+        <image id="item-image" src="{{url}}" mode="aspectFit"></image>
         <view id="item-info">
             <text id="text-type">与{{Artist2}}的相似度：{{Similarty2}}0% </text>
         </view>
